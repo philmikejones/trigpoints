@@ -35,3 +35,15 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 .Rproj.user
+
+# Exported shapefiles
+*.shp
+*.dbf
+*.prj
+*.shx
+
+# Raw data
+inst/extdata/*.csv
+
+# Zips
+*.zip
