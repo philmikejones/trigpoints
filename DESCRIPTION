@@ -1,0 +1,12 @@
+Package: trigpoints
+Title: Interactive Map of UK Trig Points
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Phil Mike",
+           family = "Jones",
+           role = c("aut", "cre"),
+           email = "philmikejones@gmail.com")
+Description: An interactive map of UK trig points using leaflet.js
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
