@@ -1,20 +1,27 @@
 # Obtain and prepare the full list of trig points from
 # https://www.ordnancesurvey.co.uk/gps/legacy-control-information/triangulation-stations
 
+library("dplyr")
+library("readr")
+library("lubridate")
 
-download.file(
-  "https://www.ordnancesurvey.co.uk/docs/gps/CompleteTrigArchive.zip",
-  destfile = "inst/extdata/CompleteTrigArchive.zip"
-)
+
+if (!file.exists("inst/extdata/CompleteTrigArchive.zip")) {
+  download.file(
+    "https://www.ordnancesurvey.co.uk/docs/gps/CompleteTrigArchive.zip",
+    destfile = "inst/extdata/CompleteTrigArchive.zip"
+  )
+}
 
 unzip(
   "inst/extdata/CompleteTrigArchive.zip",
-  exdir = "inst/extdata/"
+  exdir = "inst/extdata/",
+  overwrite = TRUE
 )
 
 trig =
-  readr::read_csv("inst/extdata/CompleteTrigArchive.csv") %>%
-  dplyr::rename(
+  read_csv("inst/extdata/CompleteTrigArchive.csv") %>%
+  rename(
     name        = `Trig Name`,
     station     = `STATION NAME`,
     new_name    = `New Name`,
@@ -32,11 +39,10 @@ trig =
     destroyed   = `DESTROYED MARK INDICATOR`,
     notes       = COMMENTS
   ) %>%
-  dplyr::mutate(
-    com_date   = lubridate::dmy(com_date),
-    maintained = lubridate::dmy(maintained),
-    lvl_date   = lubridate::dmy(lvl_date)
+  mutate(
+    com_date   = dmy(com_date),
+    maintained = dmy(maintained),
+    lvl_date   = dmy(lvl_date)
   )
 
-dir.create("data/", showWarnings = FALSE)
-saveRDS(trig, "data/trig.rds", compress = "xz")
+usethis::use_data(trig, overwrite = TRUE, compress = "xz")
