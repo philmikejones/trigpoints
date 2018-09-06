@@ -19,13 +19,13 @@ NULL
 #'   \item{order}{Level of precision to which the station was observed. 1 is highest; 4 is lowest}
 #'   \item{type}{Type of station}
 #'   \item{sec_com_blk}{Which computation block the station was computed and adjusted in}
-#'   \item{com_date}{Year of computation or recomputation}
+#'   \item{com_date}{Year of last computation}
 #'   \item{maintained}{Date of last maintenance}
 #'   \item{lvl_class}{Precision of the levelling}
 #'   \item{lvl_date}{Date of levelling}
 #'   \item{lvl_datum}{Datum the levelling refers to}
 #'   \item{destroyed}{1 = destroyed; 0 = exists}
 #'   \item{notes}{Additional notes}
-#'   \item{geometry}{Coordinates in OSBG36 British National Grid (easting, northing)}
+#'   \item{geometry}{Coordinates in OSGB36 British National Grid (easting, northing)}
 #' }
 "trigpoints"

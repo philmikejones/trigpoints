@@ -5,6 +5,7 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 note
 
+* The note refers to this being a new submission
 * This is a new release.
