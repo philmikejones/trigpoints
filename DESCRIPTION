@@ -13,4 +13,5 @@ LazyData: true
 Imports: 
     dplyr,
     readr,
-    magrittr
+    magrittr,
+    lubridate
