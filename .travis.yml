@@ -14,4 +14,6 @@ addons:
       - sourceline: 'ppa:ubuntugis/ubuntugis-unstable'
     packages:
       - libudunits2-dev
-      - libgit2-dev
+      - libgdal-dev
+      - libgeos-dev
+      - libproj-dev
