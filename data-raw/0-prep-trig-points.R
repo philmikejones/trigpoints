@@ -5,22 +5,20 @@ library("dplyr")
 library("readr")
 library("lubridate")
 
+tmp_dir = tempdir()
 
-if (!file.exists("inst/extdata/CompleteTrigArchive.zip")) {
-  download.file(
-    "https://www.ordnancesurvey.co.uk/docs/gps/CompleteTrigArchive.zip",
-    destfile = "inst/extdata/CompleteTrigArchive.zip"
-  )
-}
+download.file(
+  "https://www.ordnancesurvey.co.uk/docs/gps/CompleteTrigArchive.zip",
+  destfile = paste0(tmp_dir, "CompleteTrigArchive.zip")
+)
 
 unzip(
-  "inst/extdata/CompleteTrigArchive.zip",
-  exdir = "inst/extdata/",
-  overwrite = TRUE
+  paste0(tmp_dir, "CompleteTrigArchive.zip"),
+  exdir = tmp_dir
 )
 
 trig =
-  read_csv("inst/extdata/CompleteTrigArchive.csv") %>%
+  read_csv(paste0(tmp_dir, "CompleteTrigArchive.zip")) %>%
   rename(
     name        = `Trig Name`,
     station     = `STATION NAME`,
