@@ -1,5 +1,6 @@
 #' @importFrom tibble tibble
-#' @importFrom sf sfc
+#' @importFrom sf st_sf
+#' @importFrom sf st_sfc
 NULL
 
 #' Trig points.
