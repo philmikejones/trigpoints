@@ -1,6 +1,15 @@
+[![Travis-CI Build Status](https://travis-ci.org/philmikejones/trigpoints.svg?branch=master)](https://travis-ci.org/philmikejones/trigpoints)
+
 # Trig Points
 
-Interactive map of UK [trig points](https://en.wikipedia.org/wiki/Triangulation_station).
+Data set of UK [trig points](https://en.wikipedia.org/wiki/Triangulation_station) for use with R.
+
+
+## Installation
+
+```r
+devtools::install_github("philmikejones/trigpoints")
+```
 
 
 ## Source and licence
@@ -32,3 +41,10 @@ The list is no longer actively maintained so there are a few caveats:
     - Buried mark - This is normally a brass bolt, rod or rivet set into a concrete block 60 cm below ground level.
 - Roof stations - The station is sited on a flat roof consisting of either a dome-head bolt or rivet positioned with enough space to set up a tripod.
 - Intersected station - These are 'non-occupiable' stations consisting of church spires, chimneys or mast.
+
+
+## Contributions
+
+[Issues](https://github.com/philmikejones/trigpoints/issues) and [pull requests](https://github.com/philmikejones/trigpoints/pulls) welcome for improvements or suggestions.
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
