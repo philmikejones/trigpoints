@@ -10,8 +10,3 @@ Description: An interactive map of UK trig points using leaflet.js
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: 
-    dplyr,
-    readr,
-    magrittr,
-    lubridate
