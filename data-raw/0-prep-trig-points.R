@@ -18,7 +18,7 @@ unzip(
   exdir = tmp_dir
 )
 
-trig =
+trigpoints =
   read_csv(paste0(tmp_dir, "CompleteTrigArchive.zip")) %>%
   rename(
     name        = `Trig Name`,
@@ -45,4 +45,4 @@ trig =
   ) %>%
   st_as_sf(coords = c("easting", "northing"), crs = 27700)
 
-usethis::use_data(trig, overwrite = TRUE, compress = "xz")
+usethis::use_data(trigpoints, overwrite = TRUE, compress = "xz")
