@@ -14,7 +14,7 @@
   \item{height}{Height above Ordnance Datum in metres}
   \item{order}{Level of precision to which the station was observed. 1 is highest; 4 is lowest}
   \item{type}{Type of station}
-  \item{sec_com}{Which computation block the station was computed and adjusted in}
+  \item{sec_com_blk}{Which computation block the station was computed and adjusted in}
   \item{com_date}{Year of computation or recomputation}
   \item{maintained}{Date of last maintenance}
   \item{lvl_class}{Precision of the levelling}
