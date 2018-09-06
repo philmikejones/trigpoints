@@ -17,3 +17,4 @@ Imports:
     sf,
     tibble
 BugReports: https://github.com/philmikejones/trigpoints/issues
+URL: https://philmikejones.github.io/trigpoints/
