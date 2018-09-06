@@ -23,12 +23,10 @@ Contains OS data &copy; Crown copyright and database right (2018)
 The full list of trig points was obtained from: https://www.ordnancesurvey.co.uk/gps/legacy-control-information/triangulation-stations
 
 
-## Unmaintained data
+## Warnings
 
-The list is no longer actively maintained so there are a few caveats:
-
+- This data set is no longer maintained by Ordnance Survey so stations marked as not destroyed might no longer exist.
 - The coordinates specified are not true OSGB36 National Grid coordinates. They are expected to be accurate to within a metre so will be fine for most purposes.
-- The `destroyed` marker (`1` = `TRUE`; `0` = `FALSE`) is not maintained, so stations marked as not destroyed could no longer exist.
 
 
 ## Station types
