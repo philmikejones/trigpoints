@@ -30,5 +30,6 @@ trigpoints
 }
 \description{
 List of all UK trig points
+Contains OS data © Crown copyright and database right (2018)
 }
 \keyword{datasets}

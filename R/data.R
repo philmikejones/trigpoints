@@ -1,6 +1,7 @@
 #' Trig points.
 #'
 #' List of all UK trig points
+#' Contains OS data © Crown copyright and database right (2018)
 #'
 #' @source \url{https://www.ordnancesurvey.co.uk/gps/legacy-control-information/triangulation-stations}
 #'
@@ -22,5 +23,4 @@
 #'   \item{notes}{Additional notes}
 #'   \item{geometry}{Coordinates in OSBG36 British National Grid (easting, northing)}
 #' }
-#'
 "trigpoints"
