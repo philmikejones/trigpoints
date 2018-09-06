@@ -3,7 +3,10 @@
 language: R
 sudo: required
 dist: trusty
-cache: packages
+cache:
+  - packages
+  - ccache
+latex: false
 
 addons:
   apt:
@@ -11,3 +14,4 @@ addons:
       - sourceline: 'ppa:ubuntugis/ubuntugis-unstable'
     packages:
       - libudunits2-dev
+      - libgit2-dev
