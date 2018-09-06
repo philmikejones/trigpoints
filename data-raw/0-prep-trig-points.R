@@ -4,6 +4,7 @@
 library("dplyr")
 library("readr")
 library("lubridate")
+library("sf")
 
 tmp_dir = tempdir()
 
@@ -41,6 +42,7 @@ trig =
     com_date   = dmy(com_date),
     maintained = dmy(maintained),
     lvl_date   = dmy(lvl_date)
-  )
+  ) %>%
+  st_as_sf(coords = c("easting", "northing"), crs = 27700)
 
 usethis::use_data(trig, overwrite = TRUE, compress = "xz")
