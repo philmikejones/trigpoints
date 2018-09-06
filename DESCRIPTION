@@ -16,3 +16,4 @@ Depends: R (>= 3.4)
 Imports: 
     sf,
     tibble
+BugReports: https://github.com/philmikejones/trigpoints/issues
