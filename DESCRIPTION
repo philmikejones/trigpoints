@@ -1,5 +1,5 @@
 Package: trigpoints
-Title: Interactive Map of UK Trig Points
+Title: Data Set of UK Trig Points
 Version: 1.0.0
 Authors@R: 
     person(given = "Phil Mike",
