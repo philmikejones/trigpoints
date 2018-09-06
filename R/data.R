@@ -1,3 +1,8 @@
+#' @importFrom tibble tibble
+#' @importFrom sf st_sf
+#' @importFrom sf st_sfc
+NULL
+
 #' Trig points.
 #'
 #' List of all UK trig points
