@@ -16,17 +16,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r packages, include=FALSE, echo=FALSE}
-library("tidyverse")
+This article shows you how to plot the trigpoints data on an interactive map.
+First we need to load some packages, and the trigpoints data itself:
+
+```{r packages}
+library("dplyr")
 library("sf")
 library("leaflet")
+library("trigpoints")
 ```
 
-```{r data, include=FALSE, echo=FALSE}
-load("../data/trigpoints.rda")
-```
-
-This article shows you how to plot the trigpoints data on an interactive map.
 There are `r nrow(trigpoints)` trigpoints in the full data set---far too many to plot interactively---so I've filtered on those within 40km of Sheffield (completely arbitrarily).
 
 ```{r sheffield}
