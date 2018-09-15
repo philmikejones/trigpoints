@@ -22,3 +22,5 @@ What are these points? What is OSGB36? ..."
 
 * The note refers to this being a new submission
 * This is a new release.
+* This is a data package and is unlikely to change as the underlying data is no
+longer maintained

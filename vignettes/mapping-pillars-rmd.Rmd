@@ -1,0 +1,80 @@
+---
+title: "Map trigpoints data"
+author: "Phil Mike Jones"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Map trigpoints data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+  
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This article shows you how to plot the trigpoints data on an interactive map.
+First we need to load some packages, and the trigpoints data itself:
+
+```{r packages}
+library("dplyr")
+library("sf")
+library("leaflet")
+library("trigpoints")
+```
+
+There are `r nrow(trigpoints)` trigpoints in the full data set---far too many to plot interactively---so I've filtered on those within 40km of Sheffield (completely arbitrarily).
+
+```{r sheffield}
+# There are too many trigpoints to plot nationally, so plot those around Shef
+sheffield =
+  data.frame(
+    easting  = 435100,
+    northing = 387100,
+    stringsAsFactors = FALSE
+  ) %>%
+  st_as_sf(coords = c("easting", "northing"), crs = 27700)
+
+trigpoints =
+  trigpoints %>% 
+  filter(st_within(., st_buffer(sheffield, 40000), sparse = FALSE))
+```
+
+I also remove those that are destroyed, and also those that are not the iconic [pillar type](http://trigpointing.uk/wiki/Pillar#Hotine_Pillar).
+
+```{r filter-trigpoints}
+trigpoints =
+  trigpoints %>%
+  filter(destroyed == 0L) %>%
+  filter(type == "PILLAR")
+```
+
+Next I transform the coordinates from OSGB36 (British National Grid) to Mercator, so that they can be plotted on top of a base map.
+
+```{r transform-mercator}
+trigpoints =
+  trigpoints %>%
+  st_transform(crs = 4326)
+```
+
+Now we can create the plot.
+First we add the markers which feature a `popup` when you click a trig point.
+The popup will provide the name of the pillar, and also it's height in metres.
+Finally we add the base map tiles.
+
+```{r map-single-call, out.width="100%"}
+map =
+  leaflet(trigpoints) %>%
+  addMarkers(popup = ~ paste0(
+    htmltools::htmlEscape(name),
+    "<br />",
+    "Height: ",
+    htmltools::htmlEscape(height), " m")
+  ) %>% 
+  addTiles()
+
+map
+```
