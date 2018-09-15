@@ -1,8 +1,11 @@
 [![Travis-CI Build Status](https://travis-ci.org/philmikejones/trigpoints.svg?branch=master)](https://travis-ci.org/philmikejones/trigpoints)
 
+
 # Trig Points
 
-Data set of UK [trig points](https://en.wikipedia.org/wiki/Triangulation_station) for use with R.
+Data set of historic [trig points](https://en.wikipedia.org/wiki/Triangulation_station) in Great Britain, in [British National Grid (OSGB36)](https://en.wikipedia.org/wiki/Ordnance_Survey_National_Grid) [coordinate reference system](https://en.wikipedia.org/wiki/Spatial_reference_system) for use with R.
+Trig points were used in the retriangulation of Great Britain during the 20th Century to improve the accuracy of map making.
+Today they are mostly historical artefacts but are visited and logged ('trigpointing') by enthusiasts and, because they are typically located on hill tops, are still useful as navigational aids for hikers.
 
 
 ## Installation
