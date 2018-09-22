@@ -10,8 +10,10 @@ Today they are mostly historical artefacts but are visited and logged ('trigpoin
 
 ## Installation
 
+Install from CRAN as per a normal package:
+
 ```r
-devtools::install_github("philmikejones/trigpoints")
+install.packages("trigpoints")
 ```
 
 
