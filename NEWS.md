@@ -1,3 +1,3 @@
-# trigpoints 1.0
+# trigpoints 1.0.0
 
 * Initial release on CRAN.
