@@ -17,9 +17,11 @@ knitr::opts_chunk$set(
 ```
 
 This article shows you how to plot the trigpoints data on an interactive map.
-First we need to load some packages, and the trigpoints data itself:
+First we need to load some packages, and the trigpoints data itself (don't forget to install `trigpoints` if you haven't already):
 
 ```{r packages}
+# install.packages("trigpoints")
+
 library("dplyr")
 library("sf")
 library("leaflet")
