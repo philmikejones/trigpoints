@@ -1,5 +1,5 @@
 [![Travis-CI Build Status](https://travis-ci.org/philmikejones/trigpoints.svg?branch=master)](https://travis-ci.org/philmikejones/trigpoints)
-
+[![CRAN status](https://www.r-pkg.org/badges/version/trigpoints)](https://cran.r-project.org/package=trigpoints)
 
 # Trig Points
 
